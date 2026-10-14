@@ -15,6 +15,18 @@ type Employee struct {
 	JoinedAt  time.Time
 }
 
+func NewEmployee(id int, firstName, lastName, position string, salary float64, isActive bool) Employee {
+	return Employee{
+		id:        id,
+		FirtsName: firstName,
+		LastName:  lastName,
+		Position:  position,
+		Salary:    salary,
+		IsActive:  isActive,
+		JoinedAt:  time.Now(),
+	}
+}
+
 func main() {
 	jane := Employee{
 		id:        1,
